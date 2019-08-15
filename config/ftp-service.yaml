@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "my-ftp-service"
+spec:
+  selector:
+    app: "my-ftp"
+  ports:
+    - protocol: "TCP"
+      port: 21
+      targetPort: 21
+  type: LoadBalancer
