@@ -27,10 +27,6 @@ Create FTP service
 kubectl apply -f config/ftp-service.yaml
 ```
 
-## References
-
-<https://medium.com/platformer-blog/nfs-persistent-volumes-with-kubernetes-a-case-study-ce1ed6e2c266>
-
 ## License
 
 MIT - See [LICENSE](LICENSE) for more information.
