@@ -4,7 +4,6 @@ Deploy a FTP server with Google Kubernetes Engine (GKE) using mounted nfs volume
 
 ## Requirements
 
-- NFS Server
 Follow these instructions to deploy the NFS server
 <https://github.com/reisbel/gke-nfs-persistence-volume>
 
@@ -27,10 +26,6 @@ Create FTP service
 ```bash
 kubectl apply -f config/ftp-service.yaml
 ```
-
-## References
-
-<https://medium.com/platformer-blog/nfs-persistent-volumes-with-kubernetes-a-case-study-ce1ed6e2c266>
 
 ## License
 
