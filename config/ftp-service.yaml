@@ -6,7 +6,13 @@ spec:
   selector:
     app: "my-ftp"
   ports:
-    - protocol: "TCP"
+    - name: port1
       port: 21
-      targetPort: 21
+      nodePort: 30080
+    - name: port2
+      port: 31100
+      nodePort: 31100
+    - name: port3
+      port: 31101
+      nodePort: 31101
   type: LoadBalancer

@@ -10,7 +10,7 @@ spec:
         app: my-ftp
     spec:
       volumes:
-       - name: ftp-my-pvc-nfs
+       - name: my-pvc-nfs
          nfs:
             server: nfs-server.default.svc.cluster.local
             path: "/"
@@ -25,8 +25,8 @@ spec:
           name: "ftp-server"
 
         volumeMounts:
-        - mountPath: "/home/vsftpd"
-          name: ftp-my-pvc-nfs
+        - mountPath: /home/vsftpd
+          name: my-pvc-nfs
         env:
         - name: FTP_USER
           value: "user"
@@ -34,7 +34,7 @@ spec:
           value: "pass1234"
         - name: PASV_ADDRESS
           value: "127.0.0.1"
-        #- name: PASV_MIN_PORT
-        #  value: "21100"
-        #- name: PASV_MAX_PORT
-        #  value: "21110"
+        - name: PASV_MIN_PORT
+          value: "31100"
+        - name: PASV_MAX_PORT
+          value: "31101"
